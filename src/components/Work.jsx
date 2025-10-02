@@ -1,10 +1,11 @@
 import { Box, Container, Divider, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { forwardRef } from "react";
 
-function Work() {
+function Work(props, ref) {
   return (
     <>
       <Container
+        ref={ref}
         disableGutters
         sx={{
           px: 16,
@@ -143,4 +144,4 @@ function Work() {
   );
 }
 
-export default Work;
+export default React.forwardRef(Work);

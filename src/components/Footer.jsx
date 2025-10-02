@@ -5,9 +5,10 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import React from "react";
 
-function Footer() {
+function Footer(props, ref) {
   return (
     <Container
+      ref={ref}
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -38,4 +39,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default React.forwardRef(Footer);

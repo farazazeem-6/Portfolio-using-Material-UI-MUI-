@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Box, Container } from "@mui/material";
 import Header from "./components/Header";
 import "./App.css";
@@ -8,6 +8,9 @@ import Work from "./components/Work";
 import Footer from "./components/Footer";
 
 function App() {
+  const postRef = useRef(null);
+  const contactRef = useRef(null);
+  const workRef = useRef(null);
   return (
     <>
       <Box
@@ -18,13 +21,13 @@ function App() {
         }}
       >
         <Container>
-          <Header />
+          <Header scrollRefs={{ postRef, contactRef, workRef }} />
           <Hero />
         </Container>
 
-        <Posts />
-        <Work />
-        <Footer />
+        <Posts ref={postRef} />
+        <Work ref={workRef} />
+        <Footer ref={contactRef} />
       </Box>
     </>
   );

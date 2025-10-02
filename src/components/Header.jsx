@@ -5,7 +5,12 @@ const NavButton = styled(Button)({
   color: "black",
   textTransform: "none",
 });
-function Header() {
+function Header({ scrollRefs }) {
+  const { postRef, contactRef, workRef } = scrollRefs;
+
+  const scrollTo = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <Container>
@@ -17,9 +22,15 @@ function Header() {
           }}
         >
           <Toolbar sx={{ justifyContent: "flex-end" }}>
-            <NavButton disableRipple>Work</NavButton>
-            <NavButton disableRipple>Blog</NavButton>
-            <NavButton disableRipple>Contact</NavButton>
+            <NavButton onClick={() => scrollTo(workRef)} disableRipple>
+              Work
+            </NavButton>
+            <NavButton onClick={() => scrollTo(postRef)} disableRipple>
+              Blog
+            </NavButton>
+            <NavButton onClick={() => scrollTo(contactRef)} disableRipple>
+              Contact
+            </NavButton>
           </Toolbar>
         </AppBar>
       </Container>
