@@ -32,7 +32,7 @@ function Footer(props, ref) {
       </Box>
       <Box>
         <Typography variant="body1" sx={{ color: "#333", fontSize: "14px" }}>
-          Copyright ©2020 All rights reserved
+          Copyright ©2022 All rights reserved
         </Typography>
       </Box>
     </Container>
