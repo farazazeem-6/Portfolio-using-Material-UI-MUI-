@@ -6,7 +6,7 @@ import {
   Container,
   Typography,
 } from "@mui/material";
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 const Posts = forwardRef((props, ref) => (
   <>
     <Container

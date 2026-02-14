@@ -1,5 +1,4 @@
 import { Box, Container, Divider, Grid, Typography } from "@mui/material";
-import React, { forwardRef } from "react";
 
 function Work(props, ref) {
   return (

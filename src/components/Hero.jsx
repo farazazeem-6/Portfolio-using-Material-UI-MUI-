@@ -6,7 +6,6 @@ import {
   styled,
   Typography,
 } from "@mui/material";
-import React from "react";
 
 const StyledButton = styled(Button)({
   backgroundColor: "#FF6464",
