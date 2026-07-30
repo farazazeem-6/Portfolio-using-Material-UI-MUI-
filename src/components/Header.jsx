@@ -1,4 +1,5 @@
 import { AppBar, Container, Toolbar, Button, styled } from "@mui/material";
+import { messages } from "../constants/message";
 
 const NavButton = styled(Button)({
   color: "black",
@@ -22,13 +23,13 @@ function Header({ scrollRefs }) {
         >
           <Toolbar sx={{ justifyContent: "flex-end" }}>
             <NavButton onClick={() => scrollTo(workRef)} disableRipple>
-              Work
+              {messages.work}
             </NavButton>
             <NavButton onClick={() => scrollTo(postRef)} disableRipple>
-              Blog
+              {messages.blog}
             </NavButton>
             <NavButton onClick={() => scrollTo(contactRef)} disableRipple>
-              Contact
+              {messages.contact}
             </NavButton>
           </Toolbar>
         </AppBar>
