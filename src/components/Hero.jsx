@@ -6,6 +6,7 @@ import {
   styled,
   Typography,
 } from "@mui/material";
+import { messages } from "../constants/message";
 
 const StyledButton = styled(Button)({
   backgroundColor: "#FF6464",
@@ -54,12 +55,10 @@ function Hero() {
                 maxWidth: "500px",
               }}
             >
-              Crafting seamless web experiences with code and creativity. I
-              build responsive, real-world interfaces using React, Vite, and
-              modern UI logic—designed for impact and scalability.
+              {messages.detail}
             </Typography>
 
-            <StyledButton disableRipple>Download Resume</StyledButton>
+            <StyledButton disableRipple>{messages.downloadResume}</StyledButton>
           </Box>
 
           {/* Right Side Content  */}
