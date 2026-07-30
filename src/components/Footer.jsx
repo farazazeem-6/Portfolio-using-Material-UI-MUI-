@@ -3,6 +3,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { messages } from "../constants/message";
 
 function Footer(props, ref) {
   return (
@@ -31,7 +32,7 @@ function Footer(props, ref) {
       </Box>
       <Box>
         <Typography variant="body1" sx={{ color: "#333", fontSize: "14px" }}>
-          Copyright ©2022 All rights reserved
+          {messages.footer}
         </Typography>
       </Box>
     </Container>
