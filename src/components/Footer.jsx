@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Container, IconButton, Typography } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -6,6 +7,13 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { messages } from "../constants/message";
 
 function Footer(props, ref) {
+  const social = [
+    { Icon: FacebookIcon, label: "Facebook" },
+    { Icon: InstagramIcon, label: "Instagram" },
+    { Icon: TwitterIcon, label: "Twitter" },
+    { Icon: LinkedInIcon, label: "LinkedIn" },
+  ];
+
   return (
     <Container
       ref={ref}
@@ -16,21 +24,14 @@ function Footer(props, ref) {
         justifyContent: "center",
       }}
     >
-      <Box>
-        <IconButton>
-          <FacebookIcon />
-        </IconButton>
-        <IconButton>
-          <InstagramIcon />
-        </IconButton>
-        <IconButton>
-          <TwitterIcon />
-        </IconButton>
-        <IconButton>
-          <LinkedInIcon />
-        </IconButton>
+      <Box sx={{ display: "flex", gap: 1 }}>
+        {social.map(({ Icon, label }) => (
+          <IconButton key={label} aria-label={label}>
+            <Icon />
+          </IconButton>
+        ))}
       </Box>
-      <Box>
+      <Box mt={1}>
         <Typography variant="body1" sx={{ color: "#333", fontSize: "14px" }}>
           {messages.footer}
         </Typography>
