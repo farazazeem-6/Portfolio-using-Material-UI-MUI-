@@ -16,7 +16,7 @@ const Posts = forwardRef((props, ref) => (
       sx={{
         py: 4,
         px: 16,
-        backgroundColor: "#EDF7FA",
+        backgroundColor: "var(--muted-bg)",
         display: "flex",
         flexDirection: "column",
       }}
@@ -48,7 +48,7 @@ const Posts = forwardRef((props, ref) => (
               <Typography
                 variant="h5"
                 sx={{
-                  color: "black",
+                  color: "var(--text-dark)",
                   fontSize: "22px",
                   fontWeight: 600,
                   mb: 2,
@@ -59,7 +59,7 @@ const Posts = forwardRef((props, ref) => (
               <Typography
                 variant="h6"
                 sx={{
-                  color: "black",
+                  color: "var(--text-dark)",
                   fontSize: "14px",
                   mb: 2,
                   fontWeight: 600,
