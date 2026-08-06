@@ -10,39 +10,39 @@ import {
 } from "@mui/material";
 
 const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: "#ff6b6b",
-  color: "white",
+  backgroundColor: "var(--primary)",
+  color: "var(--bg)",
   padding: "12px 32px",
   fontSize: "16px",
   textTransform: "none",
   borderRadius: "4px",
   "&:hover": {
-    backgroundColor: "#ff5252",
+    backgroundColor: "var(--accent)",
   },
 }));
 
 const NavButton = styled(Button)({
-  color: "#333",
+  color: "var(--text)",
   textTransform: "none",
   fontSize: "16px",
   fontWeight: 500,
   marginLeft: "32px",
   "&:hover": {
     backgroundColor: "transparent",
-    color: "#ff6b6b",
+    color: "var(--primary)",
   },
 });
 
 export default function PortfolioHero() {
   return (
-    <Box sx={{ minHeight: "100vh", backgroundColor: "#fff" }}>
+    <Box sx={{ minHeight: "100vh", backgroundColor: "var(--bg)" }}>
       {/* Navigation */}
-      <AppBar
+        <AppBar
         position="static"
         elevation={0}
         sx={{
-          backgroundColor: "white",
-          borderBottom: "1px solid #f0f0f0",
+          backgroundColor: "var(--bg)",
+          borderBottom: "1px solid var(--border)",
         }}
       >
         <Toolbar sx={{ justifyContent: "flex-end", py: 2 }}>
@@ -71,7 +71,7 @@ export default function PortfolioHero() {
               sx={{
                 fontSize: { xs: "36px", md: "48px" },
                 fontWeight: 700,
-                color: "#1a1a1a",
+                color: "var(--text-dark)",
                 lineHeight: 1.2,
                 mb: 3,
               }}
@@ -85,7 +85,7 @@ export default function PortfolioHero() {
               variant="body1"
               sx={{
                 fontSize: "18px",
-                color: "#666",
+                color: "var(--text-muted)",
                 lineHeight: 1.8,
                 mb: 4,
                 maxWidth: "500px",
@@ -112,7 +112,7 @@ export default function PortfolioHero() {
               sx={{
                 width: 280,
                 height: 280,
-                border: "8px solid #f0f0f0",
+                border: "8px solid var(--border)",
               }}
             />
           </Box>
