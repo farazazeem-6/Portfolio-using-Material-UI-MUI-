@@ -32,7 +32,7 @@ function Footer(props, ref) {
         ))}
       </Box>
       <Box mt={1}>
-        <Typography variant="body1" sx={{ color: "#333", fontSize: "14px" }}>
+        <Typography variant="body1" sx={{ color: "var(--text)", fontSize: "14px" }}>
           {messages.footer}
         </Typography>
       </Box>
