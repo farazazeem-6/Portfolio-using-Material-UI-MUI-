@@ -3,3 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --text: #333333;
+    --text-dark: #1a1a1a;
+    --text-muted: #666666;
+    --primary: #ff6b6b;
+    --accent: #ff5252;
+    --bg: #ffffff;
+    --muted-bg: #edf7fa;
+    --border: #f0f0f0;
+    --border-2: #cccccc;
+    --dark: #21243D;
+}
